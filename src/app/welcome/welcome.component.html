@@ -1,0 +1,13 @@
+<div style="text-align:center; padding: 20px" *ngIf="!laboratory">
+  <h1>Configuração de Laboratório</h1>
+  <p>
+    Esta aplicaçaõ tem como objetivo configurar o laboratório para uso na plataforma Otus.
+    <br>
+    <br>
+    <button mat-raised-button color="primary"  (click)="initializeConfig()">Iniciar</button>
+  </p>
+</div>
+<div style="padding: 20px">
+  <ngx-json-viewer *ngIf="laboratory" [json]="laboratory" [expanded]="false"></ngx-json-viewer>
+
+</div>

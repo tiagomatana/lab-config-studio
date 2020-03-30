@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+import {LaboratoryConfiguration} from './laboratory-configuration';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lab-config-studio';
+  constructor(public auth: AuthService) {
+    // auth.handleAuthentication();
+  }
+
+  lab: LaboratoryConfiguration;
+
 }
